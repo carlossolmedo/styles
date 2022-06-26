@@ -1,0 +1,19 @@
+/* --------------------------------- Colors --------------------------------- */
+.h1 {
+  color: #f30c0c;
+}
+
+.h2 {
+  color: #000000;
+}
+
+.h3 {
+  color: #0b920d;
+}
+
+label {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/*# sourceMappingURL=main.css.map */
