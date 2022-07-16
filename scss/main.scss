@@ -1,8 +1,4 @@
 // Configuration
 @use 'reboot';
 @use 'utilities';
-@use 'variables' as *;
-
-.header {
-  border: 2px solid $red;
-}
+@use 'layout';

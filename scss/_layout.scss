@@ -1,0 +1,26 @@
+// Default layout
+@use 'variables'as *;
+@use 'mixins/breakpoints'as *;
+
+.header {
+  border: 2px solid $border-header;
+  text-align: center;
+}
+
+.main {
+  border: 2px solid $border-main;
+  padding: 1rem;
+}
+
+.footer {
+  border: 2px solid $border-footer;
+  text-align: center;
+}
+
+// Responsive
+@include media-breakpoint-up(sm) {
+  .main {
+    border: 2px solid $border-main;
+    padding: 2rem;
+  }
+}
