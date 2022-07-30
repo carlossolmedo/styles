@@ -3,24 +3,73 @@
 @use 'mixins/breakpoints'as *;
 
 .header {
-  border: 2px solid $border-header;
+  border: 5px solid $border-header;
   text-align: center;
 }
 
 .main {
-  border: 2px solid $border-main;
+  border: 5px solid $border-main;
   padding: 1rem;
 }
 
 .footer {
-  border: 2px solid $border-footer;
+  border: 5px solid $border-footer;
   text-align: center;
+}
+
+.legend {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100vw;
+    @include media-breakpoint-up(sm) {
+      width: 16em;
+    }
+
+    & div {
+      color: #666666;
+      font-size: smaller;
+
+      &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        display: inline-flex;
+        margin-right: 10px;
+        border-radius: 3px;
+      }
+    }
+
+    .l-header {
+      &::before {
+        background-color: $border-header;
+      }
+    }
+
+    .l-main {
+      &::before {
+        background-color: $border-main;
+      }
+    }
+
+    .l-footer {
+      &::before {
+        background-color: $border-footer;
+      }
+    }
+  }
 }
 
 // Responsive
 @include media-breakpoint-up(sm) {
   .main {
-    border: 2px solid $border-main;
     padding: 2rem;
   }
 }
